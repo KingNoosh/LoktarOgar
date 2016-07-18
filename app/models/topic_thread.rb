@@ -1,0 +1,2 @@
+class TopicThread < ApplicationRecord
+end
