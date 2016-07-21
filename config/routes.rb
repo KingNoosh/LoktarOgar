@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'index#index'
 
+  get '/auth/:provider/callback', to: 'session#create'
+  delete '/logout', to: 'sessions#destroy'
+
   resources :topic do
     resources :thread do
       resources :post
